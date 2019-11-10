@@ -1,107 +1,69 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestProjectMain {
-
-    TestProject t1 = new TestProject();
-
-    @Test
-    public void returnSumTest1(){
-
-       int rr =  t1.returnSum(3,5);
-
-        Assert.assertTrue(rr==8);
-
-    }
-
-    @Test
-    public void returnSumTest2(){
-
-        int rr =  t1.returnSum(10,2);
-
-        Assert.assertTrue(rr==12);
-
-    }
-
-    @Test
-    public void returnMultiplyTest1(){
-
-        int rr =  t1.multiply(5,2);
-
-        Assert.assertTrue(rr==10);
-
-    }
-
-    @Test
-    public void returnMultiplyTest2(){
-
-        int rr =  t1.multiply(2,6);
-
-        Assert.assertTrue(rr==12);
-
-    }
-
-    @Test
-    public void returnMultiplyTest3(){
-
-        int rr =  t1.multiply(10,0);
-
-        Assert.assertTrue(rr==0);
-
-    }
-
-    @Test
-    public void returnDivisionTest1(){
-
-        int rr =  t1.devisionofTwoNumbers(10,2);
-
-        Assert.assertTrue(rr==5);
-
-    }
-
-    @Test
-    public void returnDivisionTes2(){
-
-        int rr =  t1.devisionofTwoNumbers(20,2);
-
-        Assert.assertTrue(rr==10);
-
-    }
-
-    @Test
-    public void returnDivisionTes3(){
-
-        int rr =  t1.devisionofTwoNumbers(100,5);
-
-        Assert.assertTrue(rr==20);
-
+    private TestProject t1;
+    @Before
+    public void init() {
+        t1 = new TestProject();
     }
 
 
     @Test
-    public void TotalLength1(){
-
-        int rr =  t1.totalCharacter_ofString("States");
-
-        Assert.assertTrue(rr==6);
-
+    public void sum_Test1() {
+        Assert.assertEquals(8, t1.sum(3, 5));
     }
 
     @Test
-    public void TotalLength2(){
-
-        int rr =  t1.totalCharacter_ofString("United");
-
-        Assert.assertTrue(rr==6);
-
+    public void sum_Test2() {
+        Assert.assertEquals(12, t1.sum(10, 2));
     }
 
     @Test
-    public void TotalLength3(){
-
-        int rr =  t1.totalCharacter_ofString("America");
-
-        Assert.assertTrue(rr==7);
-
+    public void multiplication_Test1() {
+        Assert.assertEquals(10, t1.multiplication(5, 2));
     }
+
+    @Test
+    public void multiplication_Test2() {
+        Assert.assertEquals(12, t1.multiplication(2, 6));
+    }
+
+    @Test
+    public void multiplication_Test3() {
+        Assert.assertEquals(0, t1.multiplication(10, 0));
+    }
+
+    @Test
+    public void division_Test1() {
+        Assert.assertEquals(5, t1.division(10, 2));
+    }
+
+    @Test
+    public void division_Test2() {
+        Assert.assertEquals(10, t1.division(20, 2));
+    }
+
+    @Test
+    public void division_Test3() {
+        Assert.assertEquals(20, t1.division(100, 5));
+    }
+
+
+    @Test
+    public void totalCharacters_Test1() {
+        Assert.assertEquals(6, t1.totalCharacters("States"));
+    }
+
+    @Test
+    public void totalCharacters_Test2() {
+        Assert.assertEquals(6, t1.totalCharacters("United"));
+    }
+
+    @Test
+    public void totalCharacters_Test3() {
+        Assert.assertEquals(7, t1.totalCharacters("America"));
+    }
+
 }
