@@ -24,7 +24,7 @@ public class TestProject {
 
         // end of code
         return result;
-    }
+    }//
 
     /**
      * Multiply two numbers
