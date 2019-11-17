@@ -5,7 +5,7 @@ public class TestProject {
      */
     public int sum(int num1, int num2) {
         int total = 0;
-        // write your code here
+        // write your code here//
 
         total = num1 + num2;
 
