@@ -9,7 +9,7 @@ public class TestProject {
 
         total = num1 + num2;
 
-        // end of code//
+        // end of code////
         return total;
     }
 
